@@ -63,7 +63,7 @@ if prompt:
         openai_chat = ChatOpenAI(
             model_name="gpt-3.5-turbo",
             temperature=0,
-            openai_api_key=os.getenv("OPENAI_API_KEY")
+            openai_api_key=st.secrets["OPENAI_API_KEY"]
         )
 
         lang = detect_language(prompt)
