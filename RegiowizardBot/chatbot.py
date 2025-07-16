@@ -17,7 +17,7 @@ from langchain.chains import RetrievalQA
 from langchain_core.prompts import ChatPromptTemplate
 
 # 🔐 Embed your API key directly for Streamlit Cloud deployment
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 warnings.filterwarnings("ignore")
 logging.getLogger("transformers").setLevel(logging.ERROR)
 
