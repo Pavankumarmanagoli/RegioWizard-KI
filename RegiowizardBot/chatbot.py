@@ -41,7 +41,7 @@ def detect_language(text):
 
 @st.cache_resource
 def get_vectorstore():
-    pdf_path = "RegiowizardBot/chatbot.py"  # Ensure this path is correct on Streamlit Cloud
+    pdf_path = "RegiowizardBot/bad_breisig_docs.pdf"  # Ensure this path is correct on Streamlit Cloud
     loaders = [PyPDFLoader(pdf_path)]
     return VectorstoreIndexCreator(
         embedding=HuggingFaceEmbeddings(model_name='all-MiniLM-L12-v2'),
