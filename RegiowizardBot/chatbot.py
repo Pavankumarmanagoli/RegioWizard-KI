@@ -17,7 +17,6 @@ from langchain.chains import RetrievalQA
 from langchain_core.prompts import ChatPromptTemplate
 
 # 🔐 Embed your API key directly for Streamlit Cloud deployment
-OPENAI_API_KEY = "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"
 warnings.filterwarnings("ignore")
 logging.getLogger("transformers").setLevel(logging.ERROR)
 
@@ -64,7 +63,7 @@ if prompt:
         openai_chat = ChatOpenAI(
             model_name="gpt-3.5-turbo",
             temperature=0,
-            openai_api_key=OPENAI_API_KEY
+            openai_api_key=os.getenv("OPENAI_API_KEY")
         )
 
         lang = detect_language(prompt)
